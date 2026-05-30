@@ -19,7 +19,7 @@ titanic_project/<br>
 └── README.md             # Project overview and documentation
 </blockquote>
 
-## 🛠️ Tools & Libraries I am Practicing
+## 🛠️ Tools & Libraries
 
 * **Python**: Applying programming concepts to build data processing and Machine Learning pipelines.
 * **Pandas**: Practicing how to load data, manage dataframes, and handle missing values.
