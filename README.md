@@ -6,16 +6,18 @@ The primary goal of this project is to practice using fundamental libraries and 
 
 ## 📂 Project Directory Structure
 
-titanic_project/
-│
-├── data/
-│   ├── train.csv         # Training dataset used to train the model
-│   └── test.csv          # Testing dataset for making predictions
-│
-├── notebooks/
-│   └── titanic.ipynb     # Main Jupyter Notebook for analysis and modeling
-│
+<blockquote>
+titanic_project/<br>
+│<br>
+├── data/<br>
+│   ├── train.csv         # Training dataset used to train the model<br>
+│   └── test.csv          # Testing dataset for making predictions<br>
+│<br>
+├── notebooks/<br>
+│   └── titanic.ipynb     # Main Jupyter Notebook for analysis and modeling<br>
+│<br>
 └── README.md             # Project overview and documentation
+</blockquote>
 
 ## 🛠️ Tools & Libraries I am Practicing
 
