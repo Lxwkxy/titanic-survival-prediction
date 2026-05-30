@@ -1,4 +1,4 @@
-# 🚢 My First Data Science Project: Titanic Survival Prediction
+# 🚢 Titanic Survival Prediction
 
 Hello! This project serves as a learning space for my very first step into Data Science. I am using the classic Titanic dataset from Kaggle to practice writing code and predict the survival opportunities of passengers.
 
