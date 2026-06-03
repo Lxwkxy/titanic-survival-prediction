@@ -38,11 +38,11 @@ titanic_project/<br>
 
 ### 3. Model Training & Hyperparameter Tuning
 * Implemented the **k-Nearest Neighbors (k-NN)** algorithm. 
-* Learned that combining Feature Scaling with **Hyperparameter Tuning** (adjusting `n_neighbors` from 5 to 9) smoothed out data noise, leading to a significant accuracy boost!
+* Discovered the importance of **Hyperparameter Tuning** by fine-tuning `n_neighbors` from 5 up to 17, which effectively smoothed out background noise and significantly boosted model performance.
 
 ## 📈 Progress Log & Future Roadmap
 
-* **Current Status**: The model is highly optimized with Feature Engineering, Scaling, and Tuning! It achieved an impressive validation accuracy of **82.68%**.
+* **Current Status**: The model is highly optimized with Feature Engineering, Scaling, and Tuning! It achieved an impressive validation accuracy of **83.80%**.
 * **Next Steps for Study**:
   * Explore Data Visualization libraries (like Matplotlib or Seaborn) to visually present the findings.
 
