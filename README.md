@@ -23,30 +23,28 @@ titanic_project/<br>
 
 * **Python**: Applying programming concepts to build data processing and Machine Learning pipelines.
 * **Pandas**: Practicing how to load data, manage dataframes, and handle missing values.
-* **Scikit-learn**: Learning how to split datasets and implement built-in Machine Learning models.
+* **Scikit-learn**: Learning how to split datasets, scale features, and tune Machine Learning models.
 
 ## 📝 What I Have Done & Learned From This Project
 
-### 1. Exploratory Data Analysis (EDA)
-* Used Pandas to group data and uncover hidden trends, discovering that survival rates differ significantly based on **Sex**, **Ticket Class (Pclass)**, and **Port of Embarkation (Embarked)**. 
+### 1. Exploratory Data Analysis (EDA) & Feature Engineering
+* Uncovered hidden trends showing that survival rates differ significantly based on **Sex** and **Ticket Class (Pclass)**.
+* Extracted **Titles** (e.g., Mr., Mrs., Miss) from the raw `Name` text data to capture social status. 
+* Grouped `SibSp` and `Parch` into a logical **FamilyGroup** (Alone, Small, Large) to resolve non-linear survival patterns.
 
-### 2. Feature Engineering 
-* Successfully extracted **Titles** (e.g., Mr., Mrs., Miss) from the raw `Name` text data to capture social status. 
-* Grouped `SibSp` and `Parch` into a logical **FamilyGroup** (Alone, Small, Large) after realizing that raw numerical sizes confused the model due to non-linear survival patterns.
+### 2. Data Cleaning & Feature Scaling
+* Handled missing values using Median for `Age` and Mode for `Embarked`.
+* Applied **StandardScaler** to normalize feature ranges, allowing distance-based algorithms to evaluate all variables equally.
 
-### 3. Basic Data Management (Data Cleaning)
-* Handled missing values by experimenting with filling missing `Age` values with the **Median** to prevent model errors.
-* Filled missing `Embarked` data with the **Mode** and practiced encoding categorical text data into numerical values so that the model can process them mathematically.
-
-### 4. Basic Modeling
-* **Applying the Algorithm**: Implemented the **k-Nearest Neighbors (k-NN)** algorithm. Through iterative testing of engineered features, I successfully improved the model's predictive capabilities.
+### 3. Model Training & Hyperparameter Tuning
+* Implemented the **k-Nearest Neighbors (k-NN)** algorithm. 
+* Learned that combining Feature Scaling with **Hyperparameter Tuning** (adjusting `n_neighbors` from 5 to 9) smoothed out data noise, leading to a significant accuracy boost!
 
 ## 📈 Progress Log & Future Roadmap
 
-* **Current Status**: The model is running successfully with advanced Feature Engineering implemented! It achieved a validation accuracy of **81.56%**.
+* **Current Status**: The model is highly optimized with Feature Engineering, Scaling, and Tuning! It achieved an impressive validation accuracy of **82.68%**.
 * **Next Steps for Study**:
-  * Explore Feature Scaling techniques to optimize distance-based algorithms like k-NN.
-  * Explore Data Visualization libraries (like Matplotlib or Seaborn) to visually uncover more complex relationships within the data.
+  * Explore Data Visualization libraries (like Matplotlib or Seaborn) to visually present the findings.
 
 ---
 *This project is a part of my early learning journey. If you have any suggestions or feedback, please feel free to share. I am always open to learning and improving!*
