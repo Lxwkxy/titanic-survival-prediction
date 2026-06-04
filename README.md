@@ -47,7 +47,7 @@ titanic_project/<br>
 
 * **Current Status**: The project is successfully completed end-to-end! The optimized k-NN model achieved a stable local validation accuracy of **82.68%**.
 * **Next Steps for Study**:
-  * Since k-NN has reached its performance limit on this dataset, my next goal is to study and implement Tree-based models (like **Random Forest** or **XGBoost**) to see how much further I can push the prediction accuracy!
+  * Since k-NN has reached its performance limit on this dataset, my next goal is to study and implement Tree-based models (like **Random Forest** or **XGBoost**) to see how much further I can push the prediction accuracy!
 
 ---
 *This project is a part of my early learning journey. If you have any suggestions or feedback, please feel free to share. I am always open to learning and improving!*
