@@ -12,7 +12,7 @@ titanic_project/<br>
 ├── data/                 # Training and testing datasets (Ignored in Git)<br>
 │<br>
 ├── notebooks/<br>
-│   └── titanic.ipynb     # Main Jupyter Notebook for analysis, modeling, and visualization<br>
+│   └── titanic.ipynb     # Main Jupyter Notebook for data processing and modeling<br>
 │<br>
 ├── .gitignore            # Git configuration to exclude data and output files<br>
 ├── README.md             # Project overview and documentation<br>
@@ -23,13 +23,11 @@ titanic_project/<br>
 
 * **Python**: Applying programming concepts to build data processing and Machine Learning pipelines.
 * **Pandas & NumPy**: Practicing how to load data, manage dataframes, and handle missing values.
-* **Matplotlib & Seaborn**: Creating data visualizations to uncover insights and prove hypotheses.
 * **Scikit-learn**: Learning how to split datasets, scale features, tune models, and apply Cross-Validation.
 
 ## 📝 What I Have Done & Learned From This Project
 
-### 1. Exploratory Data Analysis (EDA) & Feature Engineering
-* Uncovered hidden trends showing that survival rates differ significantly based on **Sex** and **Ticket Class (Pclass)**.
+### 1. Feature Engineering
 * Extracted **Titles** (e.g., Mr., Mrs., Miss) from the raw `Name` text data to capture social status. 
 * Grouped `SibSp` and `Parch` into a logical **FamilyGroup** (Alone, Small, Large) to resolve non-linear survival patterns.
 
@@ -39,18 +37,15 @@ titanic_project/<br>
 
 ### 3. Model Training & Hyperparameter Tuning (GridSearchCV)
 * Implemented the **k-Nearest Neighbors (k-NN)** algorithm. 
-* Initially reached 83.80% by manually tuning `n_neighbors`. However, I upgraded to **GridSearchCV** to test multiple parameter combinations with 5-fold Cross-Validation. This prevented data leakage and provided a more robust and realistic Validation Accuracy of **83.24%**.
+* Upgraded the model using **GridSearchCV** to test multiple parameter combinations with 5-fold Cross-Validation. This prevented data leakage and provided a robust, stable Validation Accuracy of **82.68%**.
 
-### 4. Data Visualization & Deep Dive
-* Plotted subplots using Seaborn to visually confirm my engineered features. The graphs clearly validated the historical "Women and children first" rule, and proved that 1st class passengers and "Small Families" had the highest survival rates.
-
-### 5. Final Submission & Version Control
-* Refactored the notebook into a clean pipeline and generated the final `submission.csv` to submit to Kaggle.
+### 4. Final Submission & Version Control
+* Refactored the notebook into a clean ML pipeline and generated the final `submission.csv` to submit to Kaggle.
 * Learned how to use `.gitignore` to keep raw data and output files out of the GitHub repository, maintaining a clean and professional codebase.
 
 ## 📈 Progress Log & Future Roadmap
 
-* **Current Status**: The project is successfully completed end-to-end! The optimized k-NN model achieved a stable local validation accuracy of **83.24%**.
+* **Current Status**: The project is successfully completed end-to-end! The optimized k-NN model achieved a stable local validation accuracy of **82.68%**.
 * **Next Steps for Study**:
   * Since k-NN has reached its performance limit on this dataset, my next goal is to study and implement Tree-based models (like **Random Forest** or **XGBoost**) to see how much further I can push the prediction accuracy!
 
