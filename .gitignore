@@ -1,0 +1,8 @@
+# Ignore submission file
+submission.csv
+
+# Ignore all data files (Optional: ถ้าไม่อยากให้ไฟล์ train.csv, test.csv ขึ้นไปด้วย)
+data/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
