@@ -16,43 +16,48 @@ titanic_project/<br>
 │<br>
 ├── .gitignore            # Git configuration to exclude data and output files<br>
 ├── README.md             # Project overview and documentation<br>
-├── submission.csv        # Final k-NN predictions formatted for Kaggle (Ignored in Git)<br>
-└── rf_submission.csv     # Final Random Forest predictions formatted for Kaggle (Ignored in Git)
+├── submission.csv        # Final k-NN predictions (Ignored in Git)<br>
+├── rf_submission.csv     # Final Random Forest predictions (Ignored in Git)<br>
+└── xgb_submission.csv    # Final XGBoost predictions (Ignored in Git)
 </blockquote>
 
 ## 🛠️ Tools & Libraries I am Practicing
 
 * **Python**: Applying programming concepts to build data processing and Machine Learning pipelines.
 * **Pandas & NumPy**: Practicing how to load data, manage dataframes, and handle missing values.
-* **Scikit-learn**: Learning how to split datasets, scale features, tune hyperparameters, and implement multiple classifiers.
+* **Scikit-learn & XGBoost**: Learning how to split datasets, scale features, tune hyperparameters, and implement multiple classifiers.
 
 ## 📝 What I Have Done & Learned From This Project
 
-### 1. Feature Engineering
+### 1. Data Cleaning & Feature Engineering
 * Extracted **Titles** (e.g., Mr., Mrs., Miss) from the raw `Name` text data to capture social status. 
 * Grouped `SibSp` and `Parch` into a logical **FamilyGroup** (Alone, Small, Large) to resolve non-linear survival patterns.
-
-### 2. Data Cleaning & Feature Scaling
 * Handled missing values using Median for `Age` and Mode for `Embarked`.
-* Applied **StandardScaler** to normalize feature ranges specifically for distance-based algorithms, ensuring all variables are evaluated equally.
+* Applied **StandardScaler** to normalize feature ranges specifically for distance-based algorithms.
+
+### 2. Advanced Feature Enrichment from String Data
+* **Deck Extraction:** Filled massive missing values in `Cabin` with 'U' (Unknown) and extracted the first letter to represent the physical deck level on the ship.
+* **Ticket Frequency:** Counted identical `Ticket` numbers to identify hidden group sizes that weren't captured by explicit family relationships.
 
 ### 3. Model 1: k-Nearest Neighbors (k-NN)
-* Implemented the baseline **k-NN** algorithm.
-* Optimized parameters via manual tuning and grid search using scaled features, achieving a stable local validation accuracy of **82.68%**.
+* Implemented the baseline **k-NN** algorithm using strictly scaled features.
+* Optimized parameters via **GridSearchCV** with 5-fold CV, achieving a stable validation accuracy of **82.68%**.
 
 ### 4. Model 2: Random Forest Classifier
-* Expanded the project by implementing a tree-based ensemble model (**Random Forest**), which natively handles data without requiring scaling.
-* The baseline Random Forest model yielded **82.12%** validation accuracy.
-* Further applied **GridSearchCV** with 5-fold Cross-Validation to optimize structural parameters (`max_depth`, `n_estimators`, etc.) to prevent overfitting, resulting in a more robust and generalized validation accuracy of **81.56%**.
+* Expanded to a tree-based ensemble model, bypassing the need for feature scaling.
+* Optimized structural parameters (`max_depth`, `n_estimators`) via **GridSearchCV** to prevent overfitting, resulting in a validation accuracy of **81.56%**.
+* **Kaggle Public Score:** **0.77990** (Currently the best performing model on unseen test data).
 
-### 5. Version Control & Repository Management
-* Implemented a comprehensive `.gitignore` file to strictly exclude large data files and prediction outputs (`submission.csv`, `rf_submission.csv`) from being tracked, ensuring a clean and production-ready GitHub repository.
+### 5. Model 3: XGBoost Classifier (Extreme Gradient Boosting)
+* Implemented an advanced gradient boosting algorithm using the newly enriched string features.
+* Applied **GridSearchCV** to control the learning rate, depth, and subsampling. The tuned validation accuracy stabilized at **82.68%**.
+* **Kaggle Public Score:** **0.76794**. 
+* *Key Learning:* A crucial realization that highly complex models (like XGBoost) can sometimes overfit on very small datasets (like Titanic) compared to simpler ensemble methods like Random Forest, proving that "more complex is not always better."
 
 ## 📈 Progress Log & Future Roadmap
 
-* **Current Status**: The project successfully compares an optimized distance-based model (k-NN, 82.68%) against a robust tree-based ensemble model (Random Forest, 81.56%).
-* **Next Steps for Study**:
-  * Since both models have provided solid baselines, my next goal is to study advanced gradient boosting techniques, such as **XGBoost**, and experiment with deeper feature engineering on the `Ticket` and `Cabin` columns to push the prediction limits further!
+* **Current Status:** Completed data cleaning, feature engineering, and evaluated three distinct machine learning algorithms (k-NN, Random Forest, XGBoost). Random Forest currently holds the highest leaderboard score.
+* **Next Step (The Ultimate Ensemble):** My final goal for this dataset is to implement a **Hard Voting Classifier**, combining the predictions of all three trained models to see if a democratic consensus can break through the 80% accuracy barrier on Kaggle!
 
 ---
 *This project is a part of my early learning journey. If you have any suggestions or feedback, please feel free to share. I am always open to learning and improving!*
