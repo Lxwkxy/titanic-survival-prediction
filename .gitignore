@@ -2,6 +2,7 @@
 submission.csv
 rf_submission.csv
 xgb_submission.csv
+voting_submission.csv
 
 # Ignore all data files
 data/
