@@ -1,6 +1,7 @@
 # Ignore submission files
 submission.csv
 rf_submission.csv
+xgb_submission.csv
 
 # Ignore all data files
 data/
