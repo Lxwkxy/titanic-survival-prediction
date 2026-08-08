@@ -3,9 +3,16 @@ submission.csv
 rf_submission.csv
 xgb_submission.csv
 voting_submission.csv
+decision_tree_submission.csv
 
 # Ignore all data files
 data/
 
 # Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Local Python virtual environment
+.venv/
+
+# Local notebook backup created before cleanup
+notebooks/.titanic.before_cleanup.ipynb
